@@ -2,6 +2,7 @@ import React from "react";
 import "./FormRegister.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import useAuthentication from "../../Hooks/useAuthentication";
 
 const FormRegister = () => {
   const [displayName, setDisplayName] = useState("");
@@ -9,7 +10,8 @@ const FormRegister = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
-  const [CEP, setCEP] = useState("");
+
+  const { createUser, error: authError, loading } = useAuthentication();
 
   // Reunir todos os dados e enviar no formulario
   const handleSubmit = (e) => {
@@ -79,19 +81,11 @@ const FormRegister = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </label>
-        <label>
-          <span>CEP:</span>
-          <input
-            type="text"
-            name="Cep"
-            required
-            placeholder="Seu CEP"
-            value={CEP}
-            onChange={(e) => setCEP(e.target.value)}
-          />
-        </label>
 
-        <btn className="btn btn-primary">CADASTRAR</btn>
+        <button className="btn" type="submit">
+          CADASTRAR
+        </button>
+        {error && <p className="error">{error}</p>}
       </form>
     </div>
   );

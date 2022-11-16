@@ -1,0 +1,23 @@
+[33mcommit 8b7fccb5d9a1c0da733ee20ed965bc9587a917ff[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Rodrigo Dourado <dourado.rodrigo@outlook.com>
+Date:   Tue Nov 15 23:42:33 2022 -0300
+
+    Added Firebase to project. Create form to auth
+
+[33mcommit d1e026aeffa78e9b41627035ac12d4d9df8c782e[m
+Author: Rodrigo Dourado <dourado.rodrigo@outlook.com>
+Date:   Mon Nov 14 17:16:05 2022 -0300
+
+    Added 2 pages. Added functionality to btn's by Link react dom
+
+[33mcommit 0c1a7ac610859632a62d8ffe0f40201849dd8491[m
+Author: Rodrigo Dourado <dourado.rodrigo@outlook.com>
+Date:   Sun Nov 13 20:57:46 2022 -0300
+
+    add 2 btn in home page, add components:footer, hero, navbar. Config Router to more pages and stiled somethings
+
+[33mcommit 13c807746507becdcc6d78aab97d2fa8dee41fa5[m
+Author: Rodrigo Dourado <dourado.rodrigo@outlook.com>
+Date:   Wed Nov 9 21:55:09 2022 -0300
+
+    Initialize project using Create React App
