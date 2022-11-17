@@ -1,6 +1,5 @@
 import React from "react";
 import "./FormRegister.css";
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import useAuthentication from "../../Hooks/useAuthentication";
 
@@ -14,7 +13,7 @@ const FormRegister = () => {
   const { createUser, error: authError, loading } = useAuthentication();
 
   // Reunir todos os dados e enviar no formulario
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     setError("");
@@ -30,8 +29,16 @@ const FormRegister = () => {
       return;
     }
 
-    console.log(user);
+    const res = await createUser(user);
+
+    console.log(res);
   };
+
+  useEffect(() => {
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
 
   return (
     <div>
@@ -82,7 +89,7 @@ const FormRegister = () => {
           />
         </label>
 
-        <button className="btn" type="submit">
+        <button className="btn" type="submit" onclick="location.href = '../Pages/Login'>
           CADASTRAR
         </button>
         {error && <p className="error">{error}</p>}
