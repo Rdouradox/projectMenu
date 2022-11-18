@@ -2,6 +2,7 @@ import React from "react";
 import "./FormRegister.css";
 import { useState, useEffect } from "react";
 import useAuthentication from "../../Hooks/useAuthentication";
+import { useNavigate } from "react-router-dom";
 
 const FormRegister = () => {
   const [displayName, setDisplayName] = useState("");
@@ -14,7 +15,7 @@ const FormRegister = () => {
 
   // Reunir todos os dados e enviar no formulario
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     setError("");
 
@@ -42,7 +43,7 @@ const FormRegister = () => {
 
   return (
     <div>
-      <h2>CADASTRE-SE PARA PEDIR</h2>
+      <h3>CADASTRE-SE PARA PEDIR</h3>
       <form onSubmit={handleSubmit}>
         <label>
           <span>Nome:</span>
@@ -89,9 +90,10 @@ const FormRegister = () => {
           />
         </label>
 
-        <button className="btn" type="submit" onclick="location.href = '../Pages/Login'>
+        <button className="btn" type="submit">
           CADASTRAR
         </button>
+
         {error && <p className="error">{error}</p>}
       </form>
     </div>

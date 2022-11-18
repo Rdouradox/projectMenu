@@ -1,6 +1,15 @@
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+h2 {
+  margin-top: 4rem;
+}
+
+.register {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
 label {
   display: flex;
   flex-direction: column;
@@ -28,12 +37,13 @@ textarea {
   width: 70vw;
   margin: auto;
   max-width: 600px;
+  margin-bottom: 1rem;
 }
 
 .btn {
   border-radius: 5px;
   padding: 15px 25px;
-  font-size: 1rem;
+  font-size: 0.85rem;
   text-decoration: none;
   margin: 20px;
   color: black;
