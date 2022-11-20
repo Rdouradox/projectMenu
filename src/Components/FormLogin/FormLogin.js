@@ -1,7 +1,8 @@
 import styles from "./FormLogin.css";
-import { Link } from "react-router-dom";
+
 import { useEffect, useState } from "react";
 import { useAuthentication } from "../../Hooks/useAuthentication";
+import { Link } from "react-router-dom";
 
 const FormLogin = () => {
   const [email, setEmail] = useState("");
@@ -12,6 +13,7 @@ const FormLogin = () => {
 
   const handleSubmit = async (e) => {
     // e.preventDefault();
+    window.location = "/register";
 
     setError("");
 
@@ -33,7 +35,7 @@ const FormLogin = () => {
   }, [authError]);
 
   return (
-    <div className="conteiner">
+    <div className={styles.login}>
       <h2>Entrar</h2>
       <p>Faça o login para poder utilizar o sistema</p>
       <form onSubmit={handleSubmit}>
@@ -68,7 +70,7 @@ const FormLogin = () => {
         {error && <p className="error">{error}</p>}
       </form>
       <Link to="/register">
-        <p className="register">Criar uma nova conta</p>
+        <p className="signup">Cadastre-se aqui</p>
       </Link>
     </div>
   );

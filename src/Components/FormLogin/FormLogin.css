@@ -1,6 +1,11 @@
 /* Google Fonts */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
+.signup {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 h2 {
   margin-top: 4rem;
 }
@@ -20,7 +25,6 @@ label {
 }
 
 label span {
-  margin-bottom: 0.2rem;
   font-weight: bold;
   text-align: left;
   margin-left: 15vw;
